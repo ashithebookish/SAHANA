@@ -1,0 +1,126 @@
+[
+  {
+    "id": "mei-same-later-breakfast",
+    "person": "mei",
+    "kind": "breakfast",
+    "observation": "completed",
+    "observed_at": "2026-11-21T09:35:00+08:00",
+    "intake_delay_seconds": 0,
+    "scripted_deviation": false,
+    "checkin_response": null
+  },
+  {
+    "id": "ari-same-later-breakfast",
+    "person": "ari",
+    "kind": "breakfast",
+    "observation": "completed",
+    "observed_at": "2026-11-21T09:35:00+08:00",
+    "intake_delay_seconds": 15,
+    "scripted_deviation": true,
+    "checkin_response": null
+  },
+  {
+    "id": "ari-outside-personal-window",
+    "person": "ari",
+    "kind": "breakfast",
+    "observation": "completed",
+    "observed_at": "2026-11-22T08:25:00+08:00",
+    "intake_delay_seconds": 30,
+    "scripted_deviation": true,
+    "checkin_response": "okay"
+  },
+  {
+    "id": "mei-regular-with-response",
+    "person": "mei",
+    "kind": "breakfast",
+    "observation": "completed",
+    "observed_at": "2026-11-22T09:15:00+08:00",
+    "intake_delay_seconds": 0,
+    "scripted_deviation": false,
+    "checkin_response": "okay"
+  },
+  {
+    "id": "mei-earlier-than-usual",
+    "person": "mei",
+    "kind": "breakfast",
+    "observation": "completed",
+    "observed_at": "2026-11-23T08:15:00+08:00",
+    "intake_delay_seconds": 5,
+    "scripted_deviation": true,
+    "checkin_response": "help"
+  },
+  {
+    "id": "missing-observation",
+    "person": "mei",
+    "kind": "activity",
+    "observation": "missing",
+    "room": "Common room",
+    "observed_at": "2026-11-23T14:55:00+08:00",
+    "intake_delay_seconds": 0,
+    "scripted_deviation": false,
+    "checkin_response": null
+  },
+  {
+    "id": "explicit-inactivity",
+    "person": "mei",
+    "kind": "activity",
+    "observation": "inactive",
+    "room": "Common room",
+    "observed_at": "2026-11-23T15:10:00+08:00",
+    "intake_delay_seconds": 0,
+    "scripted_deviation": false,
+    "checkin_response": null
+  },
+  {
+    "id": "brief-stillness",
+    "person": "ari",
+    "kind": "motion",
+    "observation": "still_in_view",
+    "room": "Common room",
+    "source": "camera",
+    "observed_at": "2026-11-24T14:01:00+08:00",
+    "intake_delay_seconds": 0,
+    "scripted_deviation": false,
+    "checkin_response": null
+  },
+  {
+    "id": "verified-inactivity",
+    "person": "ari",
+    "kind": "activity",
+    "observation": "inactive",
+    "room": "Common room",
+    "source": "camera",
+    "observed_at": "2026-11-25T14:11:00+08:00",
+    "coverage_minutes": 11,
+    "intake_delay_seconds": 0,
+    "scripted_deviation": true,
+    "checkin_response": null
+  },
+  {
+    "id": "blocked-view-interrupts-coverage",
+    "person": "ari",
+    "kind": "activity",
+    "observation": "inactive",
+    "room": "Common room",
+    "source": "camera",
+    "observed_at": "2026-11-26T14:11:00+08:00",
+    "coverage_minutes": 11,
+    "missing_minute": 6,
+    "intake_delay_seconds": 0,
+    "scripted_deviation": false,
+    "checkin_response": null
+  },
+  {
+    "id": "missed-personal-common-room-visit",
+    "person": "ari",
+    "kind": "presence",
+    "observation": "absent",
+    "room": "Common room",
+    "source": "camera",
+    "observed_at": "2026-11-27T14:30:00+08:00",
+    "coverage_minutes": 35,
+    "intake_delay_seconds": 0,
+    "scripted_deviation": true,
+    "checkin_response": null
+  }
+]
