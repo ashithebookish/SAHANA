@@ -1,0 +1,17 @@
+SAHANA
+Copyright 2026 The SAHANA project contributors
+
+The Apache License, Version 2.0 applies to the original SAHANA source code
+in this release. The supplied SAHANA branding retains its applicable rights.
+
+Third-party components and tools
+
+- The local Python API uses FastAPI and Uvicorn. HTTPX and pytest are used
+  for tests and scripted validation. SQLite is accessed through Python's
+  standard library. Python dependencies retain their respective licenses.
+- The optional macOS client uses Apple SwiftUI, AVFoundation, Vision, Core ML,
+  and Speech provided by macOS and Xcode.
+- The optional seat-motion detector was evaluated with EVIORA-HAR
+  (CC BY-NC 4.0). The archive contains no EVIORA footage or trained weights.
+  https://zenodo.org/records/22239523
+- OpenAI Codex assisted with implementation, tests, and documentation.
