@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SAHANA camera test</title>
+    <link rel="icon" href="/logo.png">
+    <script defer src="/camera-test.js"></script>
+    <style>
+        :root { color-scheme: dark; background: #091a2c; color: #f6eddc; font: 100%/1.55 system-ui, sans-serif; }
+        * { box-sizing: border-box; }
+        body { margin: 0; }
+        main { max-width: 64rem; margin: auto; padding: 2.5rem clamp(1rem, 5vw, 3rem); }
+        header { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+        header img { width: 4rem; height: auto; }
+        h1 { font-family: Georgia, serif; font-size: clamp(1.9rem, 4.5vw, 2.8rem); margin: 0; }
+        p { max-width: 66ch; }
+        a { color: #ffd375; }
+        form, figure { background: #11273c; border: 1px solid #2a4964; border-radius: .8rem; padding: 1rem; }
+        form { display: grid; gap: .65rem; }
+        label { font-weight: 650; }
+        input, button { font: inherit; border-radius: .45rem; padding: .5rem .7rem; }
+        input { width: min(100%, 27rem); background: #091a2c; color: #f6eddc; border: 1px solid #6a8cab; }
+        button { color: #06264d; background: #f2b53b; border: 1px solid #f2b53b; font-weight: 700; cursor: pointer; }
+        button:disabled { opacity: .6; cursor: default; }
+        :focus-visible { outline: 2px solid #b2d1e2; outline-offset: 3px; }
+        .actions { display: flex; flex-wrap: wrap; gap: .65rem; }
+        #camera-status { min-height: 1.55rem; font-weight: 600; }
+        #camera-status[data-error="true"] { color: #ffd375; }
+        .previews { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: 1rem; }
+        figure { margin: 0; }
+        figcaption { font-weight: 650; margin-bottom: .55rem; }
+        .screen { display: grid; place-items: center; aspect-ratio: 4 / 3; background: #071522; border-radius: .45rem; }
+        .screen > * { grid-area: 1 / 1; }
+        video, .screen img { display: block; width: 100%; height: 100%; object-fit: contain; }
+        [hidden] { display: none !important; }
+    </style>
+</head>
+<body>
+<main>
+    <header><img src="/logo.png" alt=""><h1>SAHANA camera test</h1></header>
+    <p>Use the camera on this computer to send JPEG frames to SAHANA and see what the API returns. Use an empty scene or ask everyone in view for permission. The API keeps only the latest frame in memory. The test uses no microphone and reports no movement labels.</p>
+    <form id="camera-form" autocomplete="off">
+        <label for="camera-token">Local token from the launcher</label>
+        <input id="camera-token" type="password" required maxlength="200" spellcheck="false" aria-describedby="camera-status">
+        <div class="actions">
+            <button id="start-camera" type="submit">Start camera</button>
+            <button id="stop-camera" type="button" disabled>Stop camera</button>
+        </div>
+    </form>
+    <p id="camera-status" role="status" aria-atomic="true">Camera is off.</p>
+    <div class="previews">
+        <figure>
+            <figcaption>Local camera</figcaption>
+            <div class="screen"><video id="local-video" muted playsinline autoplay hidden aria-label="Local camera preview"></video>
+                <span id="local-placeholder">Camera off</span></div>
+        </figure>
+        <figure>
+            <figcaption>Frame returned by the API</figcaption>
+            <div class="screen"><img id="returned-frame" alt="Latest JPEG returned by SAHANA" hidden>
+                <span id="remote-placeholder">Waiting for a frame</span></div>
+        </figure>
+    </div>
+    <p><span id="frame-count">0</span> frames returned. <a href="/docs">API reference</a></p>
+</main>
+</body>
+</html>
