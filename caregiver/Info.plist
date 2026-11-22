@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleName</key><string>SAHANA</string>
+    <key>CFBundleDisplayName</key><string>SAHANA</string>
+    <key>CFBundleExecutable</key><string>SAHANA</string>
+    <key>CFBundleIdentifier</key><string>local.crosspointx.sahana.live</string>
+    <key>CFBundlePackageType</key><string>APPL</string>
+    <key>CFBundleIconFile</key><string>SAHANA.icns</string>
+    <key>CFBundleShortVersionString</key><string>2.1</string>
+    <key>CFBundleVersion</key><string>3</string>
+    <key>LSMinimumSystemVersion</key><string>14.0</string>
+    <key>NSHighResolutionCapable</key><true/>
+    <key>NSCameraUsageDescription</key><string>Share a live view from this Mac with SAHANA after this person has agreed. Video is recorded only when separately allowed and started.</string>
+    <key>NSMicrophoneUsageDescription</key><string>Use the microphone only while you choose to make a voice request to SAHANA.</string>
+    <key>NSSpeechRecognitionUsageDescription</key><string>Recognize short help commands on this Mac. SAHANA saves no audio or transcription.</string>
+</dict>
+</plist>
